@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Lorem ipsum</title>
+  </head>
+  <body>
+
+
+    <h1>Ces {{ count }} images se sont chargées en {{ delay / 1000}} seconde(s)</h1>
+
+    {% for i in range(count) %}
+      <img src="{{ url_for('delayed_image', delay=delay) }}" border="0" style="height: 150px; width: 200px;">
+    {% endfor %}
+
+    <h1>Cette page se charge instantanément</h1>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et urna consectetur, cursus ipsum quis, sollicitudin metus. Duis ut blandit sapien. Cras varius nunc quis erat vehicula, vel bibendum dui laoreet. Nam vel ipsum vel est suscipit ullamcorper. Praesent ut pretium nunc. Aenean id faucibus ante. Mauris ut turpis lectus.</p>
+    <p>Mauris ac ipsum aliquet, feugiat purus id, blandit ante. Cras nunc ligula, semper sit amet dignissim in, vestibulum eu libero. Vivamus ac ligula tellus. Nullam mattis nulla vel mauris gravida, vel ornare massa ornare. Donec pellentesque augue aliquam, dignissim dui quis, laoreet ipsum. Aenean efficitur libero eget libero faucibus accumsan. Nam dignissim lacus odio, eget cursus arcu tempus eu.</p>
+    <p>Duis vitae eleifend ligula, nec ullamcorper dui. Sed maximus urna in neque finibus, et porttitor magna efficitur. Etiam a turpis eu justo condimentum facilisis at ac nisl. Praesent eget condimentum magna. Phasellus nec ex non nibh volutpat vulputate. Aenean non urna feugiat, accumsan ante et, condimentum lorem. In hac habitasse platea dictumst.</p>
+    <p>Aenean euismod ullamcorper eros, ut pulvinar ex hendrerit euismod. Sed mollis magna et nunc faucibus iaculis. Aliquam molestie posuere metus, sit amet elementum libero posuere et. Mauris consequat, dolor a dignissim pretium, lectus metus mollis felis, vel rhoncus felis nibh in augue. Donec pellentesque erat nulla, interdum molestie felis cursus euismod. Sed luctus urna at venenatis porttitor. Donec faucibus ultricies felis, sit amet commodo dui lacinia sit amet. Aenean suscipit erat ipsum, eget scelerisque sapien suscipit a. Etiam dignissim risus in convallis egestas. Mauris sagittis lobortis quam, non mollis mauris rhoncus id. Cras nec libero ut metus mollis facilisis nec a libero. Quisque finibus rhoncus enim non dictum. Maecenas quis enim vehicula, pharetra nulla ut, pulvinar lectus. Ut tincidunt nulla at malesuada vulputate.</p>
+    <p>Sed vitae fermentum felis, at hendrerit arcu. Vestibulum lectus tortor, faucibus eget imperdiet et, pretium nec massa. Donec pellentesque interdum pretium. Aenean at velit pharetra, congue libero id, dignissim lectus. Proin pulvinar augue sit amet leo feugiat pretium non rutrum mauris. Nullam at nisl a erat rhoncus malesuada. Maecenas ultricies urna lectus, ac suscipit diam dictum ac. </p>
+
+    <h1>Cette image se charge instantanément</h1>
+
+    <img src="{{ url_for('static', filename='cats.jpg') }}" border="0" style="height: 150px; width: 200px;">
+
+  </body>
+</html>

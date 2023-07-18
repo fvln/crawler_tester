@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function redirect(){
+        window.location.replace("{{ url_for('landing') }}")
+      }
+   </script>
+  </head>
+  <body onLoad="setTimeout('redirect()', {{ delay }})">
+     <div>Vous allez être redirigé dans {{ delay / 1000}} seconde(s).</div>
+  </body>
+</html>
