@@ -120,6 +120,26 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "gunicorn"
+version = "21.1.0"
+description = "WSGI HTTP Server for UNIX"
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "gunicorn-21.1.0-py3-none-any.whl", hash = "sha256:11fc98ea214a5845f614891e8c90b0211fbe595e677d204d7cd7d80f6f348891"},
+    {file = "gunicorn-21.1.0.tar.gz", hash = "sha256:37ced4b6622f263a6483eb7cbe9606df81afd57dc0fa464883600624790271c5"},
+]
+
+[package.dependencies]
+packaging = "*"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "importlib-metadata"
 version = "6.8.0"
 description = "Read metadata from Python packages"
@@ -378,4 +398,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4.0"
-content-hash = "7787d63f35f7346066a0df029eaae7956d35355df829cdf8b2b0dab1448214e0"
+content-hash = "df6b2aa2a42f5a6252ed3629d2318705bc194c8fd25240c1a6b61072088d7be3"

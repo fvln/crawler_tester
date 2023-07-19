@@ -9,6 +9,7 @@ packages = [{include = "crawler_tester"}]
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
 flask = "^2.3.2"
+gunicorn = "^21.1.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"

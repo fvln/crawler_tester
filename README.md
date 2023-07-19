@@ -11,8 +11,8 @@ pip3 install flask
 ## Run
 
 ```sh
-poetry install
-poetry run flask --app crawler_tester run
+poetry install --no-root
+poetry run gunicorn 'crawler_tester:create_app()'
 ```
 
 ## Available endpoints
