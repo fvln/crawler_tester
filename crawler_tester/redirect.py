@@ -1,5 +1,7 @@
 from flask import Blueprint, abort, make_response, request, render_template
 
+from crawler_tester.http_codes import CODES_REDIRECT
+
 
 bp_redirect = Blueprint("redirect", __name__, url_prefix="/redirect")
 
@@ -7,7 +9,7 @@ bp_redirect = Blueprint("redirect", __name__, url_prefix="/redirect")
 def redirect_http(status_code=""):
     try:
         http_code = int(status_code)
-        if http_code < 300 or http_code > 308:
+        if http_code not in CODES_REDIRECT:
             raise ValueError("reponse code should be in range [300,308]")
     except Exception as e:
         return make_response(f"Invalid HTTP status response: {e}", 404)
