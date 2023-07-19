@@ -8,7 +8,7 @@
     <h1>Ces {{ count }} images se sont chargées en {{ delay / 1000}} seconde(s)</h1>
 
     {% for i in range(count) %}
-      <img src="{{ url_for('delay.delayed_image', delay=delay) }}" border="0" style="height: 150px; width: 200px;">
+      <img class="delayed" src="{{ url_for('delay.delayed_image', delay=delay) }}" border="0" style="height: 150px; width: 200px;">
     {% endfor %}
 
     <h1>Cette page se charge instantanément</h1>
