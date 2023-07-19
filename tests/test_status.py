@@ -1,6 +1,6 @@
 import pytest
 
-from crawler_tester.http_codes import CODES_REDIRECT, CODES_SUCCESS, CODES_ERR_CLIENT
+from crawler_tester.http_codes import CODES_REDIRECT
 
 
 @pytest.mark.parametrize("code", CODES_REDIRECT)
