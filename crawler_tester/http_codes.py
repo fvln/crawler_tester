@@ -6,7 +6,6 @@ CODES_SUCCESS = [
     204,  # No Content
     205,  # Reset Content
     206,  # Partial Content
-    
     # Useless
     # 207,  # Multi-Status
     # 208,  # Already Reported
@@ -21,11 +20,9 @@ CODES_REDIRECT = [
     305,  # Use Proxy (depuis HTTP/1.1)
     307,  # Temporary Redirect
     308,  # Permanent Redirect
-
     # TODO ?
-    # 300,  # Multiple Choices
+    # 300,  # Multiple Choices
     # 304,  # Not Modified
-
     # Useless
     # 306,  # inutilisé
     # 310,  # Too many Redirects
