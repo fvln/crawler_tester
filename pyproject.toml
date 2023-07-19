@@ -10,6 +10,11 @@ packages = [{include = "crawler_tester"}]
 python = ">=3.8,<4.0"
 flask = "^2.3.2"
 
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
 
 [build-system]
 requires = ["poetry-core"]
