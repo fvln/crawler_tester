@@ -25,7 +25,7 @@ poetry run gunicorn 'crawler_tester:create_app()'
 | `/redirect/js-location-assign` | Return a page with a JS script using location.assign() to redirect to the _/landing_ page | |
 | `/redirect/js-location-replace` | Return a page with a JS script using location.replace() to redirect to the _/landing_ page | |
 | `/redirect/js-location-href` | Return a page with a JS script using location.href to redirect to the _/landing_ page | |
-| `/redirect/js-meta-refresh?delay=1000` | Return a page with a META tag to redirect to the _/landing_ page | `delay`: delay in milliseconds before redirection |
-| `/redirect/js-meta-refresh?delay=1000` | Return a page with a JS script redirecting to the _/landing_ page after the _onload_ event is triggered | `delay`: delay in milliseconds before redirection |
-| `/delay/page?delay=1000` | Return a valid HTML page after a given delay | `delay`: delay in milliseconds before the response is sent |
-| `/delay/contents?delay=1000&count=3` | Return a valid HTML page containing _count + 1_ images, some of them being returned after the specified delay | `delay`: delay in milliseconds before the images are sent |
+| `/redirect/js-meta-refresh` | Return a page with a META tag to redirect to the _/landing_ page | `delay`: delay in milliseconds before redirection |
+| `/redirect/js-obfuscated-location-assign` | Return a page with a JS script redirecting to the _/landing_ page after the _onload_ event is triggered | `delay`: delay in milliseconds before redirection |
+| `/delay/page` | Return a valid HTML page after a given delay | `delay`: delay in milliseconds before the response is sent |
+| `/delay/contents` | Return a valid HTML page containing _count + 1_ images, some of them being returned after the specified delay | `delay`: delay in milliseconds before the images are sent<br>`count`: number of image to load in the page |
