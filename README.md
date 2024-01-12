@@ -2,10 +2,10 @@
 
 ## Dependencies 
 
-Flask :
+Poetry:
 
 ```
-pip3 install flask
+pip3 install poetry
 ```
 
 ## Run
@@ -27,5 +27,6 @@ poetry run gunicorn 'crawler_tester:create_app()'
 | `/redirect/js-location-href` | Return a page with a JS script using location.href to redirect to the _/landing_ page | |
 | `/redirect/js-meta-refresh` | Return a page with a META tag to redirect to the _/landing_ page | `delay`: delay in milliseconds before redirection |
 | `/redirect/js-obfuscated-location-assign` | Return a page with a JS script redirecting to the _/landing_ page after the _onload_ event is triggered | `delay`: delay in milliseconds before redirection |
+| `/redirect-chain/<number>` | Return <number> times using HTTP headers, eventually leading to page /landing | `number`: how many redirects will be performed in total |
 | `/delay/page` | Return a valid HTML page after a given delay | `delay`: delay in milliseconds before the response is sent |
 | `/delay/contents` | Return a valid HTML page containing _count + 1_ images, some of them being returned after the specified delay | `delay`: delay in milliseconds before the images are sent<br>`count`: number of image to load in the page |

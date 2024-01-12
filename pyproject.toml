@@ -2,7 +2,7 @@
 name = "crawler-tester"
 version = "0.1.0"
 description = ""
-authors = [""]
+authors = ["Florent <fvln@github.com>"]
 readme = "README.md"
 packages = [{include = "crawler_tester"}]
 
@@ -14,6 +14,7 @@ gunicorn = "^21.1.0"
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"
 pytest-flask = "^1.2.0"
+beautifulsoup4 = "^4.12.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
